@@ -13,7 +13,8 @@ class Node {
 }
 
 class BinaryTree {
-// Root of Binary Tree
+	
+	// Root of Binary Tree
 	Node root;
 
 	BinaryTree() {
