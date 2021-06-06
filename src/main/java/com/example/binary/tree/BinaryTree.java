@@ -1,4 +1,4 @@
-package com.example;
+package com.example.binary.tree	;
 
 //Tree traversal in Java
 

@@ -1,4 +1,4 @@
-package com.example;
+package com.example.binary.search;
 
 //Binary Search Tree operations in Java
 class BinarySearchTree {
