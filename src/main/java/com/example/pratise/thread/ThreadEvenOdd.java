@@ -20,6 +20,7 @@ class EvenThread implements Runnable {
 				}
 				this.lock.unlock();
 			}
+			System.out.println(Thread.currentThread().getName() + ": Exit " );
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -48,8 +49,8 @@ class OddThread implements Runnable {
 				}
 				this.lock.unlock();
 			}
+			System.out.println(Thread.currentThread().getName() + ": Exit " );
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -63,8 +64,8 @@ public class ThreadEvenOdd {
 		Thread t2 = new Thread(new OddThread(ip, ip.lock), "Odd");
 		t1.start();
 		t2.start();
-		t1.join();
-		t2.join();
+		//t1.join();
+		//t2.join();
 	}
 }
 
