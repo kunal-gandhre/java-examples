@@ -19,7 +19,7 @@ public class ThreadStates implements Runnable {
 
 	@Override
 	public void run() {
-		thread myThread = new thread();
+		MyThread myThread = new MyThread();
 		Thread thread2 = new Thread(myThread);
 
 		// thread1 created and is currently in the NEW state.
@@ -49,7 +49,7 @@ public class ThreadStates implements Runnable {
 
 }
 
-class thread implements Runnable {
+class MyThread implements Runnable {
 	public void run() {
 		// moving thread2 to timed waiting state
 		try {
