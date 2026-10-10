@@ -2,6 +2,7 @@ package com.example.immutable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 /*
  * This is immutable class
@@ -51,15 +52,27 @@ public final class NetworkConfig {
 	}
 	
 	public static void main(String[] args) { 
-		NetworkConfig netConfig = new NetworkConfig("localhost", 5252, Arrays.asList("config1","config2"));
+		
+		List<String> list = new ArrayList<>();
+		
+		list.add("config 1");
+		list.add("config 2");
+		
+		NetworkConfig netConfig = new NetworkConfig("localhost", 5252, list );
 		System.out.println("Hash code of netConfig instance " + netConfig.hashCode());
 		netConfig.printConfig();
 		
 		// try to modify config
 		netConfig.getProperties().add("config3");
 		netConfig.getProperties().add(1 , "configNew");
+		
+		list.add("config 3");
+		
 		System.out.println("\nHash code of netConfig instance " + netConfig.hashCode());
 		netConfig.printConfig();
+		
+		System.err.println(list.toString());
+		System.err.println(netConfig.getProperties().toString());
 		
 		// this is reference to same instance , here state is preserved but cant modify
 		NetworkConfig netConfig2 = netConfig;
