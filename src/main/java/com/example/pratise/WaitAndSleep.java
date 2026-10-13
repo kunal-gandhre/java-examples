@@ -38,8 +38,14 @@ class ThreadB extends Thread {
     public void run() {
         synchronized (this) {
             int i = 0;
-            while (i < 100000) {
+            while (i < 1000) {
                 sum += i;
+                try {
+                	Thread.sleep(5);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
                 i++;
             }
             notify();

@@ -1,5 +1,7 @@
 package com.example.pratise.thread;
 
+import java.util.concurrent.Semaphore;
+
 class EvenThread implements Runnable {
 
 	Input ip;
@@ -29,6 +31,8 @@ class EvenThread implements Runnable {
 }
 
 class OddThread implements Runnable {
+	
+	//Semaphore 
 
 	Input ip;
 	Lock lock;

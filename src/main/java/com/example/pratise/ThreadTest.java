@@ -13,7 +13,7 @@ public class ThreadTest {
 				p.pause();
 				try {
 					System.err.println("sleep");
-					Thread.sleep(100000);
+					Thread.sleep(5000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -24,7 +24,7 @@ public class ThreadTest {
 
 		test.start();
 		Scanner in = new Scanner(System.in);
-		System.out.println("Enter 1 number");
+		System.out.println("Enter 1 number to resume");
 		String nextLine = in.nextLine();
 		switch (nextLine) {
 		case "1":
@@ -39,6 +39,7 @@ public class ThreadTest {
 		default:
 			break;
 		}
+		
 	}
 }
 
